@@ -1,0 +1,82 @@
+// 1. Variables: Sobrescribimos los colores por defecto de Bootstrap
+// Colores oficiales de marca Odoo
+// Primario: Púrpura oscuro
+$primary: #714b67;
+// Secundario: Teal/Verde azulado
+$secondary: #017e84;
+// Gris: Para textos secundarios
+$gray: #8f8f8f;
+// Partner Colors
+$partner-learning: #e46e78;
+$partner-ready: #21b799;
+$partner-silver: #5b899e;
+$partner-gold: #e4a900;
+// Tipografía Oficial Odoo: Inter
+$font-family-sans-serif:
+  'Inter',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  sans-serif;
+$headings-font-weight: 600;
+$body-color: #333333;
+$line-height-base: 1.5;
+
+// 2. Importación: Traemos todo el framework Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// 3. Estilos Personalizados
+
+// Hero Section: Define el fondo con los colores de marca de Odoo
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    $primary 0%,
+    $secondary 100%
+  ); // Gradiente púrpura a teal
+  color: white;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  position: relative;
+  border-bottom-right-radius: 15vw; // CRÍTICO: Esto crea la curva asimétrica
+}
+
+// Hero Card: La tarjeta blanca flotante
+.hero-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); // Sombra profunda para "flotar"
+  padding: 1.5rem;
+  max-width: 400px;
+  margin-left: auto; // Empuja la tarjeta a la derecha
+}
+
+// Simulador de Tarjeta de Crédito
+.credit-card-mockup {
+  background: linear-gradient(
+    135deg,
+    #181935 0%,
+    #26274d 100%
+  ); // Gradiente oscuro
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden; // Para recortar el brillo decorativo
+}
+
+// Utilidad Glassmorphism (Vidrio)
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); // El efecto borroso mágico
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+// Efectos Hover para Premios
+.card-award {
+  transition: transform 0.3s ease; // Suaviza la animación
+  &:hover {
+    transform: translateY(-5px); // Mueve la tarjeta hacia arriba
+    cursor: pointer;
+  }
+}
