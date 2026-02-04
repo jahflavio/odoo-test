@@ -1,0 +1,24 @@
+{
+    "name": "odoo",
+    "version": "1.0.0",
+    "description": "Odoo Static Landing Page Design Exercise",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:css": "sass assets/scss/style.scss assets/css/style.css",
+        "watch:css": "sass --watch assets/scss/style.scss assets/css/style.css"
+    },
+    "keywords": [
+        "odoo",
+        "landing-page",
+        "bootstrap",
+        "scss"
+    ],
+    "author": "Fabián Flores",
+    "license": "LGPL-3.0",
+    "type": "commonjs",
+    "dependencies": {
+        "bootstrap": "^5.3.3",
+        "sass": "^1.97.3"
+    }
+}
